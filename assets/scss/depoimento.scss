@@ -1,0 +1,121 @@
+#depoimento {
+    padding: 25px 0;
+    background-color: #F0F6F9;
+
+    @include lg {
+        padding: 50px 0 0;
+    }
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include lg {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .left {
+            max-width: 400px;
+            margin-bottom: 25px;
+
+            @include lg {
+                max-width: 280px;
+            }            
+
+            @include xl {
+                max-width: 300px;
+                margin-right: 20px;
+            }
+
+            .diferenciado {
+                font-size: .9rem;
+                display: block;
+                margin-bottom: 20px;
+                color: $aquatext;
+            }
+
+            h2 {
+                color: $purple;
+                font-size: 1.8rem;
+                font-weight: 500;
+
+                @include lg {
+                    font-size: 2.2rem;
+                }
+
+                @include xl {
+                    font-size: 2.5rem;
+                }
+
+                strong {
+                    color: $aquatext;
+                }
+            }
+        }
+
+        .depo__mobile {
+            width: 150px;
+            height: 150px;
+            background: url(../../img/jose-fernando.png) /cover;
+            background-color: $white;
+            border-radius: 50%;
+            border: 4px solid $aqua;
+
+            @include lg {
+                display: none;
+            }
+        }
+
+        .depo__desk {
+            display: none;
+
+            @include lg {
+                display: block;
+                margin-right: 35px;
+                width: 300px;
+            }
+
+            @include xl {
+                width: auto;
+            }
+        }
+
+        .right {
+            max-width: 400px;
+
+            @include lg {
+                max-width: 300px;
+                margin-top: -100px;
+            }
+
+            @include xl {
+                margin-top: -150px;
+            }
+
+            .quote {
+                margin-bottom: 20px;
+            }
+
+            .depo__texto {
+                font-size: .9rem;
+                line-height: 1.2rem;
+                color: $purple;
+                margin-bottom: 35px;
+            }
+
+            .depo__nome {
+                font-weight: bold;
+                color: $aquatext;
+                margin-bottom: 5px;
+            }
+
+            .depo__desc {
+                font-size: .7rem;
+                color: $purple;
+            }
+        }
+    }
+}

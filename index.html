@@ -5,16 +5,335 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Integrada | Consolide</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <!-- BEIGN: META NAME -->
+    <meta name="description"
+        content="Como Registrar sua Marca? Saiba como não perder a sua Marca. Registre sua marca. Não cobramos anuidade. Seu Registro com garantia." />
+    <meta name="keywords" content="registro marca patente proteção marketing" />
+    <meta name="author" content="Caio Haag - caiohaag@gmail.com" />
+    <meta name="language" content="Portuguese" />
+
+    <!-- OG TAGS -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Consolide - Registro De Marcas | Registre Sua Marca">
+    <meta property="og:description"
+        content="Como Registrar sua Marca? Saiba como não perder a sua Marca. Registre sua marca. Não cobramos anuidade. Seu Registro com garantia.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Consolide Registro de Marcas">
+    <meta property="og:image" content="https://www.consolidesuamarca.com.br/static/assets/images/share-image-new.png">
+    <meta property="og:image:secure_url"
+        content="https://www.consolidesuamarca.com.br/static/assets/images/share-image-new.png">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dist/main.min.css">
 </head>
 
 <body>
-    
+    <main class="wrapper__consolide">
+        <header>
+            <div class="container header">
+                <div class="header__logos">
+                    <a href="#" title="Loja Integrada">
+                        <img src="./assets/img/loja-integrada.png" alt="Loja Integrada" class="logo__loja-integrada">
+                    </a>
+                    <img src="./assets/img/coracao.png" alt="Coração" class="heart">
+                    <a href="#" title="Consolide">
+                        <img src="./assets/img/consolide.png" alt="Consolide" class="logo__consolide">
+                    </a>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=55555555555555" target="_blank" title="Whatsapp"
+                    class="btn-whatsapp">
+                    WHATSAPP<br><span>FALE CONOSCO AGORA</span>
+                </a>
+            </div>
+            <div class="container wrapper__top">
+                <div class="top__left">
+                    <h1>Atenção, sua marca pode estar em risco!</h1>
+                    <p>Somente o Registro de marca é capaz de <strong>proteger o nome e logotipo da sua marca</strong>,
+                        tornando você o único proprieetário, e impedindo alguém de copiar ou usar sua marca de forma
+                        indevida.</p>
+                    <div class="top__consultores">
+                        <img src="./assets/img/consultores-especialistas.png" alt="Consultores Especialistas"
+                            class="consultores">
+                        <p>Os Consultores <strong>especialistas</strong> em <strong>Proteção de Marca</strong> da
+                            <strong>Consolide</strong>
+                        </p>
+                    </div>
+                    <img src="./assets/img/ico-padlock.png" alt="Segurança" class="ico__padlock">
+                </div>
+                <form action="mail.php" id="form__consulte" data-aos="zoom-in" data-validate data-goal="Consolide"
+                    method="POST">
+                    <img src="./assets/img/ico-security.png" alt="Segurança" class="ico__security">
+                    <h3>Consulte aqui sua marca!</h3>
+                    <div class="fdkey">
+                        <input type="text" name="fdkey" />
+                    </div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required class="form-control"
+                        data-rule-required="true" data-msg-required="Preencha o campo corretamente">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone com DDD" required
+                        class="form-control" data-rule-required="true"
+                        data-msg-required="Preencha o campo corretamente">
+                    <div class="alert alert-primary msg-success">
+                        E-mail enviado com sucesso!
+                    </div>
+                    <div class="alert alert-sending msg-whait">
+                        Enviando...
+                    </div>
+                    <div class="alert alert-warning msg-error">
+                        Ocorreu um erro, tente mais tarde
+                    </div>
+                    <button type="submit">Solicitar consulta</button>
+                    <div class="centra">
+                        <span class="lgpd">Ao receber consulta você aceita receber contato da Consolide</span>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <section id="registro">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">
+                    Explicamos tudo sobre <strong>registro de marca</strong> para você!
+                </h2>
+                <iframe width="290" height="170" src="https://www.youtube.com/embed/YVjY4MLtlQc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="como__funciona">
+            <div class="container centra">
+                <h2 class="section__title" data-aos="fade-up">Como funciona o <strong>registro de marca</strong> com a
+                    <strong>Consolide?</strong>
+                </h2>
+            </div>
+            <div class="container">
+                <div class="processo">
+                    <div class="processo__item">
+                        <span class="processo__numero">1</span>
+                        <div>
+                            <h4>Pesquisa de marca</h4>
+                            <p>Os consultores fazem a pesquisa de viabilidade do nome da marca para identificar se sua
+                                marca está disponível.</p>
+                        </div>
+                    </div>
+                    <div class="processo__item">
+                        <span class="processo__numero">2</span>
+                        <div>
+                            <h4>Acompanhamento</h4>
+                            <p>Auxiliamos a preparação da documentação e supervisionamos todo processo para que você
+                                saiba a situação do Registro da sua marca.</p>
+                        </div>
+                    </div>
+                    <div class="processo__item">
+                        <span class="processo__numero processo__numero--3">3</span>
+                        <div>
+                            <h4>Registro realizado</h4>
+                            <p>Pode comemorar: sua marca está registrada e protegida <strong>pelos próximos 10
+                                    anos!</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/img/dashboard.jpg" alt="Dashboard" class="dashboard" data-aos="fade-left">
+            </div>
+        </section>
+        <section id="cnpj">
+            <div class="container--purple" data-aos="zoom-in">
+                <div class="left">
+                    <h2>CNPJ não protege sua marca!</h2>
+                    <p>Somente o registro de marca é capaz de proteger 🔒 o nome e logotipo do seu negócio, tornando
+                        você o único proprietário, e impedindo alguém de copiar ou usar sua marca de forma indevida.</p>
+                    <img src="./assets/img/ico-padlock-2.png" alt="Segurança" class="padlock">
+                </div>
+                <iframe width="270" height="160" src="https://www.youtube.com/embed/YVjY4MLtlQc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="beneficios">
+            <div class="container">
+                <div class="centra">
+                    <h2 class="section__title" data-aos="fade-up">Com a sua marca registrada você</h2>
+                </div>
+                <div class="flex__cards">
+                    <div class="card">
+                        <div class="icone">
+                            <img src="./assets/img/svg/copias.svg" alt="Evita cópias">
+                        </div>
+                        <span>Evita cópias</span>
+                        <p>
+                            Você impede que sua marca <strong>seja plagiada</strong> e usada de forma indevida por
+                            outros.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <img src="./assets/img/svg/exclusividade.svg" alt="Exclusividade">
+                        </div>
+                        <span>Garante exclusividade</span>
+                        <p>
+                            Com a marca registrada, você <strong>garante exclusividade</strong> no seu segmento de
+                            mercado em todo Brasil.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <img src="./assets/img/svg/dinheiro.svg" alt="Evita prejuízos">
+                        </div>
+                        <span>Evita prejuízos financeiros</span>
+                        <p>
+                            Todos investimentos em marketing e fortalecimento de marca são perdidos se você tiver que
+                            trocar o <strong> nome do seu negócio</strong>.
+                        </p>
+                    </div>
+                </div>
+                <a href="#" class="link-banner">
+                    <div class="banner__desconto" data-aos="zoom-in">
+                        <div class="circle--1"></div>
+                        <div class="circle--2"></div>
+                        <img src="./assets/img/desconto.png" class="desconto" alt="Desconto">
+                        <div class="valor">
+                            <span class="valor__top">Desconto de <img src="./assets/img/presente.png"
+                                    alt="Presente"></span>
+                            <div>
+                                <span class="rs">R$</span>
+                                <span class="valor__valor">500</span>
+                            </div>
+                        </div>
+                        <div class="valor__texto">
+                            <span>Para fazer o registro da sua marca junto com a<br> <strong>Consolide.
+                                    Aproveite!</strong></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="depoimento">
+            <div class="container">
+                <div class="left">
+                    <span class="diferenciado">Trabalho diferenciado</span>
+                    <h2>Mais de <strong>12 mil marcas registradas</strong> e negócios protegidos!</h2>
+                </div>
+                <div class="depo__mobile"></div>
+                <img src="./assets/img/jose-fernando.png" alt="José Fernando" class="depo__desk">
+                <div class="right">
+                    <img src="./assets/img/svg/quotes.svg" alt="Citação" class="quote">
+                    <p class="depo__texto">
+                        “Temos um time de advogados especialistas em <strong>registro de marcas</strong> pronto para
+                        ajudar o emprendedor brasileiro!” 😎
+                    </p>
+                    <p class="depo__nome">José Fernando</p>
+                    <p class="depo__desc">José Fernando, especialista em segurança de marca</p>
+                </div>
+            </div>
+        </section>
+        <section id="slider">
+            <div class="container">
+                <div class="centra">
+                    <h2 class="section__title" data-aos="fade-up">
+                        Quem precisa <strong>registrar marca?</strong>
+                    </h2>
+                </div>
+                <div class="splide slider__quem__precisa">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="box">
+                                    <img src="./assets/img/svg/ico-1.svg" alt="Icone">
+                                    <span>Influencers</span>
+                                    <p>Pela facilidade de criar contas redes sociais, é cada vez mais comum que
+                                        influencers tenham seu nome usado de forma indevida.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="box">
+                                    <img src="./assets/img/svg/ico-2.svg" alt="Icone">
+                                    <span>Sites e Portais</span>
+                                    <p>Apenas o registro do domínio do seu site não protege o nome dele, sendo
+                                        necessário fazer o registro da marca.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="box">
+                                    <img src="./assets/img/svg/ico-3.svg" alt="Icone">
+                                    <span>E-commerce</span>
+                                    <p>O registro do domínio do site e da URL não protegem o nome do seu negócio
+                                        judicialmente, apenas o registro da marca.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="box">
+                                    <img src="./assets/img/svg/ico-4.svg" alt="Icone">
+                                    <span>Produto físico</span>
+                                    <p>É possível registrar o nome de um produto para evitar que a concorrência copie o
+                                        nome do seu produto ou crie variações do mesmo.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="box">
+                                    <img src="./assets/img/svg/ico-5.svg" alt="Icone">
+                                    <span>Canal no Youtube</span>
+                                    <p>Para que o nome do seu canal não seja plagiado, o registro de marca é o único
+                                        meio que protege judicialmente.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="parceria">
+            <div class="container">
+                <img src="./assets/img/parceria-exclusiva.png" alt="Parceria Exclusiva" class="img__parceria"
+                    data-aos="fade-right">
+                <div class="right">
+                    <h2>Parceria exclusiva</h2>
+                    <img src="./assets/img/logos.png" alt="Loja Integrada e Consolide" class="logos">
+                    <p>Sua marca é <strong>muito importante</strong> e queremos que você a proteja, por isso nos unimos
+                        com a <strong>empresa que mais registra marcas no Brasil.</strong></p>
+                    <span>Não perca mais tempo, <a href="#form__consulte">registre sua marca</a> 😍</span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <a href="#" title="INPI" class="inpi">
+                    <img src="./assets/img/inpi.png" alt="INPI">
+                </a>
+                <div class="logos__footer">
+                    <a href="#" title="Loja Integrada" class="first">
+                        <img src="./assets/img/loja-integrada.png" alt="Loja Integrada">
+                    </a>
+                    <a href="#" title="Consolide" class="second">
+                        <img src="./assets/img/consolide.png" alt="Consolide">
+                    </a>
+                </div>
+            </div>
+            <div class="centra">
+                <small>© 2021 Consolide Registro de Marcas ® - Todos os direitos reservados.</small>
+            </div>
+        </footer>
+    </main>
 
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/lib/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/dist/main.min.js"></script>
 </body>
 

@@ -1,0 +1,75 @@
+#slider {
+    padding: 25px 0 75px;
+    
+    @include md {
+        padding: 50px 0 75px;
+    }
+
+    .container {
+        max-width: 1400px;
+        .slider__quem__precisa {
+            position: relative;
+
+            .splide__arrows {
+                position: absolute;
+                bottom: -75px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .splide__arrow {
+                    position: static;
+                    margin: 0 6px;
+                    background-color: $aqua;
+                    
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+
+                .splide__arrow--next {
+                    background-color: rgb(214, 214, 214);
+                }
+            }
+            
+            .splide__slide {
+                display: flex;
+                justify-content: center;
+            }
+            .box {
+                width: 225px;                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+                border: 1px solid #ECE9EF;
+                border-radius: 10px;
+                cursor: grab;
+
+                &:hover {
+                    background-color: #F0F6F9;
+                }
+
+                img {
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    font-weight: bold;
+                    color: $purple;
+                    display: block;
+                    margin-bottom: 25px;
+                }
+
+                p {
+                    font-size: .9rem;
+                    line-height: 1.2rem;
+                    text-align: center;     
+                    max-width: 200px;               
+                }
+            }
+        }
+    }
+}

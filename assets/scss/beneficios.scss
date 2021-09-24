@@ -1,0 +1,222 @@
+#beneficios {
+    padding: 25px 0;
+
+    @include lg {
+        padding: 50px 0;
+    }
+
+    .container {
+
+        .section__title {
+            max-width: 800px;
+        }
+
+        .flex__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+
+            @include md {
+                margin-bottom: 50px;
+            }
+            @include lg {
+                
+                align-items: center;
+            }
+            
+            .card {
+                width: 235px;                
+                display: flex;
+                flex-direction: column;
+                margin: 15px;
+                align-items: center;
+                padding: 25px 15px 25px;
+                border-radius: 65px;
+                background: linear-gradient(180deg, #CEEAEA 0%, rgba(255, 255, 255, 0) 100%);
+
+                @include lg {
+                    height: 350px;
+                }
+                @include xl {
+                    width: 278px;
+                    height: 350px;
+                    padding: 50px 15px 0;
+                }
+
+                @include xl {
+                    margin: 25px;
+                }
+
+                .icone {
+                    width: 65px;
+                    height: 65px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: $white;
+                    margin-bottom: 20px;
+                }
+                span {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    color: $purple;
+                    margin-bottom: 20px;
+                    display: block;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1rem;
+                    text-align: center;
+                    line-height: 1.3rem;
+                    color: $purpletext;
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .link-banner {
+            text-decoration: none;            
+        }
+
+        .banner__desconto {
+            background-color: #5D50AE;
+            padding: 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            max-width: 350px;
+            margin: 0 auto;
+            transition: transform 200ms ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            @include sm {
+                flex-direction: row;
+                max-width: none;
+                justify-content: space-around;
+            }
+
+            @include md {
+                padding: 0 15px 0 0;
+                justify-content: space-between;
+            }
+
+            @include lg {
+                padding: 0 75px 0 0;
+            }
+
+            .circle--1 {
+                position: absolute;
+
+                @include lg {
+                    background-color: #B0A6F1;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    top: 25px;
+                    right: 60px;
+                }
+            }
+
+            .circle--2 {
+                position: absolute;
+
+                @include lg {
+                    background-color: #B0A6F1;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    top: 55px;
+                    right: 30px;
+                }
+            }
+
+
+            .desconto {
+                display: none;
+
+                @include md {
+                    display: block;
+                    height: 125px;
+                }
+
+                @include lg {
+                    height: 150px;
+                }
+
+                @include xl {
+                    height: auto;
+                }
+            }
+
+            .valor {
+                color: $white;
+
+                .valor__top {                    
+                    font-size: 1.2rem;
+                    display: block;
+                    margin-bottom: 5px;
+
+                    @include xl {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    align-items: flex-start;                    
+
+                    .rs {
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        margin-right: 5px;
+
+                        @include xl {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    .valor__valor {
+                        font-weight: bold;
+                        font-size: 3rem;
+                        margin-top: -3px;
+
+                        @include xl {
+                            font-size: 4.3rem;
+                        }
+                    }
+                }
+
+            }
+            .valor__texto {
+                span {
+                    text-align: center;
+                    display: block;
+                    color: $white;
+                    line-height: 1.2rem;
+
+                    @include lg {
+                        text-align: start;
+                        line-height: 2rem;
+                    }
+
+                    strong {
+                        color: #CBC4F6;
+                        font-size: 1.3rem;
+
+                        @include lg {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+footer {
+    background: linear-gradient(180deg, #F4F7F9 0%, rgba(244, 247, 249, 0) 100%);
+    padding: 25px 0;
+
+    @include md {
+        padding: 50px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .inpi {
+            margin-bottom: 15px;
+        }
+
+        .logos__footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .first {
+                padding-right: 10px;
+                border-right: 1px solid #C2D1D9;
+
+                @include md {
+                    padding-right: 20px;
+                }
+            }
+
+            .second {
+                padding-left: 10px;
+
+                @include md {
+                    padding-left: 25px;
+                }
+            }
+
+            a {
+                img {
+                    width: 120px;
+
+                    @include md {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    .centra {
+        margin-top: 15px;
+
+        @include md {
+            margin-top: 35px;
+        }
+        small {
+            font-size: .6rem;
+            text-align: center;
+            color: #A1AEB7;
+        }
+    }
+}

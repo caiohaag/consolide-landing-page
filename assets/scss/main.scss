@@ -1,4 +1,12 @@
 /* VARIÁVEIS */ 
+$purple: #371E56;
+$purpletext: #5F4B78;
+$light: #ECE9EF;
+$bluetext: #42526B;
+$white: #fff;
+$aqua: #2BC4C3;
+$aquatext: #0C9898;
+$green: #17C37B;
 
 
 
@@ -56,6 +64,7 @@ $screen-xxl: 1500px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 :root {
     font-size: 16px;
@@ -81,12 +90,57 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+strong {
+  font-weight: bold;
+}
+
 body {
 	line-height: 1;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
   }
+
+.centra {
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
+}
+
+.wrapper__consolide {
+  overflow-x: hidden;    
+}
+
+.section__title {
+  color: $purple;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  max-width: 400px;
+
+  @include md {
+      font-size: 2rem;
+      max-width: 500px;
+      margin-bottom: 50px;
+  }
+
+  @include lg {
+      font-size: 3rem;
+      max-width: 750px;
+  }
+}
+
+
+@import './header.scss';
+@import './registro.scss';
+@import './como__funciona.scss';
+@import './cnpj.scss';
+@import './beneficios.scss';
+@import './depoimento.scss';
+@import './slider.scss';
+@import './parceria.scss';
+@import './footer.scss';

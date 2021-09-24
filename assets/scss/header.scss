@@ -1,0 +1,335 @@
+header {
+    padding: 25px 0;
+    background: url(../../img/background-mobile.jpg) center / cover;    
+
+    @include md {
+        background: url(../../img/background.jpg) center / cover;   
+    }
+
+    @include lg {
+        height: 100vh;
+        max-height: 850px;
+        display: flex;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include sm {
+            flex-direction: row;
+            justify-content: space-between;            
+        }
+
+        @include lg {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0px 25px;
+        }
+
+        @media (min-width: 1150px) {
+            padding: 0;
+        }
+
+        .header__logos {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            @include sm {
+                margin: 0;
+            }
+
+            .logo__loja-integrada {
+                width: 110px;
+
+                @include md {
+                    width: auto;
+                }
+            }
+
+            .heart {
+                width: 15px;
+                margin: 0 15px 0 10px;
+
+                @include md {
+                    width: auto;
+                }
+            }
+
+            .logo__consolide {
+                width: 110px;
+
+                @include md {
+                    width: auto;
+                }
+            }
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(0deg, #13A468 10%, #1AD688 97.81%);
+            border-radius: 100px;
+            color: $white;
+            text-decoration: none;
+            padding: 5px 20px 5px 60px;
+            font-size: .8rem;
+            line-height: 1rem;
+            font-weight: 300;
+            position: relative;    
+            transition: transform 200ms ease;        
+
+            span {
+                font-size: .6rem;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 43px;
+                background: url(../../img/whatsapp.png) / cover;
+                top: 0;
+                left: -1px;
+            }
+
+            &:hover {
+                background: linear-gradient(0deg, #0f945d 10%, #15ce81 97.81%);
+                transform: scale(1.05);      
+            }
+        }
+    }
+
+    .wrapper__top {
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 0 100px;
+        }
+
+        @include lg {
+            padding: 75px 0 125px;
+        }
+
+        .top__left {
+            max-width: 400px;
+            margin-bottom: 15px;
+            position: relative;
+
+            @include md {
+                max-width: 300px;
+            }
+
+            @include lg {
+                max-width: 425px;
+            }
+
+            h1 {
+                font-weight: bold;
+                color: $purple;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                text-align: center;
+                margin-bottom: 15px;
+
+                @include md {
+                    text-align: start;
+                }
+
+                @include lg {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                    width: 350px;
+                }
+
+                @include xl {
+                    font-size: 3rem;
+                    line-height: 3.3rem;
+                    width: 425px;
+                }
+            }
+
+            p {
+                color: $purpletext;
+                font: .9rem / 1.2rem Inter;
+                text-align: justify;
+                margin-bottom: 35px;
+
+                @include lg {
+                    font: 1rem / 1.3rem Inter;
+                    width: 390px;
+                    margin-bottom: 50px;
+                }
+            }
+
+            .top__consultores {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include lg {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                p {
+                    font: .7rem / 1rem Inter;
+                    max-width: 200px;
+                    
+                    @include lg {
+                        margin: 0 0 0 10px;
+                        font: .8rem / 1rem Inter;
+                        max-width: 220px;
+                    }
+                }
+            }
+
+            .ico__padlock {
+                display: none;
+
+                @include sm {
+                    display: block;
+                    position: absolute;
+                    right: -50px;
+                    bottom: 80px;
+                }
+
+                @include md {
+                    right: -125px;
+                }
+            }
+        }
+
+        #form__consulte {
+            background-color: $white;     
+            position: relative;       
+            padding: 35px 25px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;    
+            max-width: 400px;     
+            width: 100%;   
+            box-shadow: 6px 6px 72px rgba(255, 167, 120, 0.12);
+
+            @include md {
+                max-width: 300px;
+                padding: 50px 35px;
+            }
+
+            @include lg {
+                max-width: 400px;
+            }
+
+            @include xl {
+                max-width: 450px;
+            }
+
+            .ico__security {
+                position: absolute;
+                display: none;
+
+                @include sm {
+                    display: block;
+                    left: -70px;
+                    top: 10px;
+                }
+
+                @include lg {
+                    top: 25px;
+                }
+            }
+
+            h3 {
+                color: $purple;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 25px;
+
+                @include lg {
+                    font-size: 1.3rem;
+                    margin-bottom: 40px;
+                }
+                
+            }
+
+            .fdkey {
+                display: none;
+            }
+
+            .error {
+                margin-bottom: 10px;
+                color: red;
+            }
+
+            .alert {
+                display: block;
+                text-align: center;
+                margin-bottom: 10px;
+                padding: 5px;                
+                border-radius: 10px;      
+                display: none;          
+            }
+
+            .msg-whait {
+                background-color: antiquewhite;
+            }
+
+            .msg-error {
+                background-color: orange;
+            }
+
+            .msg-success {
+                background-color: $green;
+            }
+
+            label {
+                color: $purple;
+                font-weight: bold;
+                font-size: .8rem;
+                margin-bottom: 5px;
+            }
+
+            input {
+                border: 1px solid #CEEAEA;
+                border-radius: 50px;
+                padding: 8px 15px;
+                margin-bottom: 20px;
+                outline: none;
+            }
+
+            button {
+                background-color: $aqua;
+                border: none;
+                outline: none;
+                padding: 10px;
+                color: $white;
+                font-weight: bold;
+                border-radius: 50px;
+                margin-bottom: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $purple;
+                }
+
+                @include lg {
+                    margin-bottom: 35px;
+                }
+            }
+
+            .lgpd {
+                text-align: center;
+                font: .6rem / .9rem Inter;
+                max-width: 200px;
+                color: $purple;
+            }
+        }
+    }
+}
