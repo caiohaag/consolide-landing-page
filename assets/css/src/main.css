@@ -88,8 +88,7 @@ header {
       background: url(../../img/background.jpg) center/cover; } }
   @media (min-width: 992px) {
     header {
-      height: 100vh;
-      max-height: 850px;
+      height: 850px;
       display: flex; } }
   header .header {
     display: flex;
